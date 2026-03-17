@@ -1,0 +1,38 @@
+# docker-compose.yml
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bankalyst_demo
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       bankalyst_demo
+      POSTGRES_USER:     hackathon
+      POSTGRES_PASSWORD: bankalyst2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init/01_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ./db/init/02_seed.sql:/docker-entrypoint-initdb.d/02_seed.sql
+      - ./db/init/03_readonly_user.sql:/docker-entrypoint-initdb.d/03_readonly_user.sql
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hackathon -d bankalyst_demo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: bankalyst_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL:    admin@bankalyst.demo
+      PGADMIN_DEFAULT_PASSWORD: bankalyst2026
+    ports:
+      - "5050:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pg_data:

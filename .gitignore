@@ -1,0 +1,7 @@
+# .gitignore
+pg_data/
+.env
+*.log
+node_modules/
+__pycache__/
+.DS_Store
