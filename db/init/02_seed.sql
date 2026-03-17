@@ -16,9 +16,9 @@ INSERT INTO bank (bank_uuid, name) VALUES
 -- ─────────────────────────────────────────────────────────
 
 INSERT INTO user_rol (role_uuid, name, description) VALUES
-('r1000000-0000-0000-0000-000000000001', 'admin',        'Bank administrator'),
-('r1000000-0000-0000-0000-000000000002', 'loan_officer', 'Loan officer'),
-('r1000000-0000-0000-0000-000000000003', 'client',       'Bank client / borrower');
+('e1000000-0000-0000-0000-000000000001', 'admin',        'Bank administrator'),
+('e1000000-0000-0000-0000-000000000002', 'loan_officer', 'Loan officer'),
+('e1000000-0000-0000-0000-000000000003', 'client',       'Bank client / borrower');
 
 -- ─────────────────────────────────────────────────────────
 -- CLIENTS  (15 borrowers)
@@ -46,24 +46,24 @@ INSERT INTO client (id_bank, ssn, name, address, city, company, phone_number) VA
 -- ─────────────────────────────────────────────────────────
 
 INSERT INTO users (user_uuid, username, email, hashed_password, full_name, is_active, id_user_rol, id_client) VALUES
-('c1000001-0000-0000-0000-000000000001', 'r.harrington', 'r.harrington@sunrise.demo', '$2b$12$placeholder01', 'Robert M. Harrington',  1, 3,  1),
-('c1000001-0000-0000-0000-000000000002', 's.vega',        's.vega@sunrise.demo',       '$2b$12$placeholder02', 'Sandra L. Vega',         1, 3,  2),
-('c1000001-0000-0000-0000-000000000003', 'c.reyes',       'c.reyes@sunrise.demo',      '$2b$12$placeholder03', 'Carlos A. Reyes',        1, 3,  3),
-('c1000001-0000-0000-0000-000000000004', 'j.whitmore',    'j.whitmore@gulf.demo',      '$2b$12$placeholder04', 'Jennifer K. Whitmore',   1, 3,  4),
-('c1000001-0000-0000-0000-000000000005', 'd.nguyen',      'd.nguyen@gulf.demo',        '$2b$12$placeholder05', 'David T. Nguyen',        1, 3,  5),
-('c1000001-0000-0000-0000-000000000006', 'p.obrien',      'p.obrien@gulf.demo',        '$2b$12$placeholder06', 'Patricia G. O''Brien',   1, 3,  6),
-('c1000001-0000-0000-0000-000000000007', 'm.torres',      'm.torres@heritage.demo',    '$2b$12$placeholder07', 'Michael J. Torres',      1, 3,  7),
-('c1000001-0000-0000-0000-000000000008', 'l.patel',       'l.patel@heritage.demo',     '$2b$12$placeholder08', 'Linda R. Patel',         1, 3,  8),
-('c1000001-0000-0000-0000-000000000009', 'b.fontaine',    'b.fontaine@heritage.demo',  '$2b$12$placeholder09', 'Brian W. Fontaine',      1, 3,  9),
-('c1000001-0000-0000-0000-000000000010', 'm.santos',      'm.santos@sunrise.demo',     '$2b$12$placeholder10', 'Maria E. Santos',        1, 3, 10),
-('c1000001-0000-0000-0000-000000000011', 'k.marsh',       'k.marsh@gulf.demo',         '$2b$12$placeholder11', 'Kevin D. Marsh',         1, 3, 11),
-('c1000001-0000-0000-0000-000000000012', 'a.zhou',        'a.zhou@heritage.demo',      '$2b$12$placeholder12', 'Angela C. Zhou',         1, 3, 12),
-('c1000001-0000-0000-0000-000000000013', 't.kaplan',      't.kaplan@sunrise.demo',     '$2b$12$placeholder13', 'Thomas P. Kaplan',       1, 3, 13),
-('c1000001-0000-0000-0000-000000000014', 'r.delgado',     'r.delgado@gulf.demo',       '$2b$12$placeholder14', 'Rosa N. Delgado',        1, 3, 14),
-('c1000001-0000-0000-0000-000000000015', 's.webb',        's.webb@heritage.demo',      '$2b$12$placeholder15', 'Steven A. Webb',         1, 3, 15),
-('o9000000-0000-0000-0000-000000000001', 'lo.sunrise',    'officer@sunrise.demo',      '$2b$12$placeholderof1', 'James R. Callahan',     1, 2, NULL),
-('o9000000-0000-0000-0000-000000000002', 'lo.gulf',       'officer@gulf.demo',         '$2b$12$placeholderof2', 'Diane P. Eckhart',      1, 2, NULL),
-('o9000000-0000-0000-0000-000000000003', 'admin.sys',     'admin@bankalyst.demo',      '$2b$12$placeholderadm', 'System Admin',          1, 1, NULL);
+('a0000001-0000-0000-0000-000000000001', 'r.harrington', 'r.harrington@sunrise.demo', '$2b$12$placeholder01', 'Robert M. Harrington',  1, 3,  1),
+('a0000001-0000-0000-0000-000000000002', 's.vega',        's.vega@sunrise.demo',       '$2b$12$placeholder02', 'Sandra L. Vega',         1, 3,  2),
+('a0000001-0000-0000-0000-000000000003', 'c.reyes',       'c.reyes@sunrise.demo',      '$2b$12$placeholder03', 'Carlos A. Reyes',        1, 3,  3),
+('a0000001-0000-0000-0000-000000000004', 'j.whitmore',    'j.whitmore@gulf.demo',      '$2b$12$placeholder04', 'Jennifer K. Whitmore',   1, 3,  4),
+('a0000001-0000-0000-0000-000000000005', 'd.nguyen',      'd.nguyen@gulf.demo',        '$2b$12$placeholder05', 'David T. Nguyen',        1, 3,  5),
+('a0000001-0000-0000-0000-000000000006', 'p.obrien',      'p.obrien@gulf.demo',        '$2b$12$placeholder06', 'Patricia G. O''Brien',   1, 3,  6),
+('a0000001-0000-0000-0000-000000000007', 'm.torres',      'm.torres@heritage.demo',    '$2b$12$placeholder07', 'Michael J. Torres',      1, 3,  7),
+('a0000001-0000-0000-0000-000000000008', 'l.patel',       'l.patel@heritage.demo',     '$2b$12$placeholder08', 'Linda R. Patel',         1, 3,  8),
+('a0000001-0000-0000-0000-000000000009', 'b.fontaine',    'b.fontaine@heritage.demo',  '$2b$12$placeholder09', 'Brian W. Fontaine',      1, 3,  9),
+('a0000001-0000-0000-0000-000000000010', 'm.santos',      'm.santos@sunrise.demo',     '$2b$12$placeholder10', 'Maria E. Santos',        1, 3, 10),
+('a0000001-0000-0000-0000-000000000011', 'k.marsh',       'k.marsh@gulf.demo',         '$2b$12$placeholder11', 'Kevin D. Marsh',         1, 3, 11),
+('a0000001-0000-0000-0000-000000000012', 'a.zhou',        'a.zhou@heritage.demo',      '$2b$12$placeholder12', 'Angela C. Zhou',         1, 3, 12),
+('a0000001-0000-0000-0000-000000000013', 't.kaplan',      't.kaplan@sunrise.demo',     '$2b$12$placeholder13', 'Thomas P. Kaplan',       1, 3, 13),
+('a0000001-0000-0000-0000-000000000014', 'r.delgado',     'r.delgado@gulf.demo',       '$2b$12$placeholder14', 'Rosa N. Delgado',        1, 3, 14),
+('a0000001-0000-0000-0000-000000000015', 's.webb',        's.webb@heritage.demo',      '$2b$12$placeholder15', 'Steven A. Webb',         1, 3, 15),
+('b9000000-0000-0000-0000-000000000001', 'lo.sunrise',    'officer@sunrise.demo',      '$2b$12$placeholderof1', 'James R. Callahan',     1, 2, NULL),
+('b9000000-0000-0000-0000-000000000002', 'lo.gulf',       'officer@gulf.demo',         '$2b$12$placeholderof2', 'Diane P. Eckhart',      1, 2, NULL),
+('b9000000-0000-0000-0000-000000000003', 'admin.sys',     'admin@bankalyst.demo',      '$2b$12$placeholderadm', 'System Admin',          1, 1, NULL);
 
 -- ─────────────────────────────────────────────────────────
 -- COMPANIES
@@ -72,23 +72,23 @@ INSERT INTO users (user_uuid, username, email, hashed_password, full_name, is_ac
 
 INSERT INTO companies (client_uuid, name, ein) VALUES
 -- Harrington: 2 empresas
-('c1000001-0000-0000-0000-000000000001', 'Harrington Holdings LLC',     '45-7001001'),
-('c1000001-0000-0000-0000-000000000001', 'Harrington Realty Trust',     '45-7001002'),
+('a0000001-0000-0000-0000-000000000001', 'Harrington Holdings LLC',     '45-7001001'),
+('a0000001-0000-0000-0000-000000000001', 'Harrington Realty Trust',     '45-7001002'),
 -- Reyes: 2 empresas
-('c1000001-0000-0000-0000-000000000003', 'Reyes Commercial Group',      '45-7003001'),
-('c1000001-0000-0000-0000-000000000003', 'Reyes Property Management',   '45-7003002'),
+('a0000001-0000-0000-0000-000000000003', 'Reyes Commercial Group',      '45-7003001'),
+('a0000001-0000-0000-0000-000000000003', 'Reyes Property Management',   '45-7003002'),
 -- Resto: 1 empresa cada uno
-('c1000001-0000-0000-0000-000000000004', 'Whitmore Properties LLC',     '45-7004001'),
-('c1000001-0000-0000-0000-000000000006', 'O''Brien Retail Inc',         '45-7006001'),
-('c1000001-0000-0000-0000-000000000007', 'Torres & Sons Realty',        '45-7007001'),
+('a0000001-0000-0000-0000-000000000004', 'Whitmore Properties LLC',     '45-7004001'),
+('a0000001-0000-0000-0000-000000000006', 'O''Brien Retail Inc',         '45-7006001'),
+('a0000001-0000-0000-0000-000000000007', 'Torres & Sons Realty',        '45-7007001'),
 -- Fontaine: 2 empresas (aparecen en su Schedule E)
-('c1000001-0000-0000-0000-000000000009', 'Fontaine Capital LLC',        '84-2308423'),
-('c1000001-0000-0000-0000-000000000009', 'B & B Interior Services Inc', '45-5379058'),
-('c1000001-0000-0000-0000-000000000010', 'Santos Medical Group',        '45-7010001'),
-('c1000001-0000-0000-0000-000000000011', 'Marsh Industrial LLC',        '45-7011001'),
-('c1000001-0000-0000-0000-000000000013', 'Kaplan Development Corp',     '45-7013001'),
-('c1000001-0000-0000-0000-000000000014', 'Delgado Foods Inc',           '45-7014001'),
-('c1000001-0000-0000-0000-000000000015', 'Webb Tech Ventures',          '45-7015001');
+('a0000001-0000-0000-0000-000000000009', 'Fontaine Capital LLC',        '84-2308423'),
+('a0000001-0000-0000-0000-000000000009', 'B & B Interior Services Inc', '45-5379058'),
+('a0000001-0000-0000-0000-000000000010', 'Santos Medical Group',        '45-7010001'),
+('a0000001-0000-0000-0000-000000000011', 'Marsh Industrial LLC',        '45-7011001'),
+('a0000001-0000-0000-0000-000000000013', 'Kaplan Development Corp',     '45-7013001'),
+('a0000001-0000-0000-0000-000000000014', 'Delgado Foods Inc',           '45-7014001'),
+('a0000001-0000-0000-0000-000000000015', 'Webb Tech Ventures',          '45-7015001');
 
 -- ─────────────────────────────────────────────────────────
 -- FILINGS  (tax filings por empresa)
@@ -258,18 +258,18 @@ INSERT INTO form_versions (filing_id, company_id, form_type, year, version, data
 -- ─────────────────────────────────────────────────────────
 
 INSERT INTO guarantors (client_uuid, status, score, year, version) VALUES
-('c1000001-0000-0000-0000-000000000001', 'approved',  78.5, 2023, 1),
-('c1000001-0000-0000-0000-000000000002', 'approved',  65.2, 2023, 1),
-('c1000001-0000-0000-0000-000000000003', 'approved',  82.1, 2023, 2),
-('c1000001-0000-0000-0000-000000000004', 'approved',  91.0, 2023, 1),
-('c1000001-0000-0000-0000-000000000005', 'pending',   NULL, 2023, 1),
-('c1000001-0000-0000-0000-000000000006', 'approved',  70.3, 2023, 1),
-('c1000001-0000-0000-0000-000000000007', 'approved',  88.7, 2023, 1),
-('c1000001-0000-0000-0000-000000000009', 'rejected',  44.1, 2023, 1),
-('c1000001-0000-0000-0000-000000000010', 'approved',  76.9, 2023, 1),
-('c1000001-0000-0000-0000-000000000011', 'pending',   NULL, 2023, 1),
-('c1000001-0000-0000-0000-000000000013', 'approved',  55.0, 2023, 1),
-('c1000001-0000-0000-0000-000000000014', 'approved',  83.4, 2023, 1);
+('a0000001-0000-0000-0000-000000000001', 'approved',  78.5, 2023, 1),
+('a0000001-0000-0000-0000-000000000002', 'approved',  65.2, 2023, 1),
+('a0000001-0000-0000-0000-000000000003', 'approved',  82.1, 2023, 2),
+('a0000001-0000-0000-0000-000000000004', 'approved',  91.0, 2023, 1),
+('a0000001-0000-0000-0000-000000000005', 'pending',   NULL, 2023, 1),
+('a0000001-0000-0000-0000-000000000006', 'approved',  70.3, 2023, 1),
+('a0000001-0000-0000-0000-000000000007', 'approved',  88.7, 2023, 1),
+('a0000001-0000-0000-0000-000000000009', 'rejected',  44.1, 2023, 1),
+('a0000001-0000-0000-0000-000000000010', 'approved',  76.9, 2023, 1),
+('a0000001-0000-0000-0000-000000000011', 'pending',   NULL, 2023, 1),
+('a0000001-0000-0000-0000-000000000013', 'approved',  55.0, 2023, 1),
+('a0000001-0000-0000-0000-000000000014', 'approved',  83.4, 2023, 1);
 
 -- ─────────────────────────────────────────────────────────
 -- FILINGS_GUARANTOR
@@ -286,7 +286,7 @@ INSERT INTO filings_guarantor (id, client_uuid, form_type, year, data, version) 
 --   84-2308423 = Fontaine Capital LLC         (empresa en companies)
 -- En SQL esto es invisible. En un grafo es una relación directa.
 ('fg-fontaine-2023',
- 'c1000001-0000-0000-0000-000000000009',
+ 'a0000001-0000-0000-0000-000000000009',
  'form_1040', 2023,
  '{
    "forms": {
@@ -356,7 +356,7 @@ INSERT INTO filings_guarantor (id, client_uuid, form_type, year, data, version) 
 -- Robert M. Harrington — Form 1040 2023
 -- Schedule E: socio de Harrington Holdings + Harrington Realty Trust
 ('fg-harrington-2023',
- 'c1000001-0000-0000-0000-000000000001',
+ 'a0000001-0000-0000-0000-000000000001',
  'form_1040', 2023,
  '{
    "forms": {
@@ -423,7 +423,7 @@ INSERT INTO filings_guarantor (id, client_uuid, form_type, year, data, version) 
 -- Carlos A. Reyes — Form 1040 2023
 -- Schedule E: socio de Reyes Commercial + Reyes Property Mgmt
 ('fg-reyes-2023',
- 'c1000001-0000-0000-0000-000000000003',
+ 'a0000001-0000-0000-0000-000000000003',
  'form_1040', 2023,
  '{
    "forms": {
@@ -479,7 +479,7 @@ INSERT INTO filings_guarantor (id, client_uuid, form_type, year, data, version) 
 
 -- Thomas P. Kaplan — Form 1040 2023
 ('fg-kaplan-2023',
- 'c1000001-0000-0000-0000-000000000013',
+ 'a0000001-0000-0000-0000-000000000013',
  'form_1040', 2023,
  '{
    "forms": {
@@ -534,62 +534,62 @@ INSERT INTO loan_applications
      property_address, property_county, property_use, property_occupancy,
      current_step, completion_percentage, status, created_at)
 VALUES
-('la000001-0000-0000-0000-000000000001',
- 'c1000001-0000-0000-0000-000000000001',
+('1a000001-0000-0000-0000-000000000001',
+ 'a0000001-0000-0000-0000-000000000001',
  'purchase', 1250000, 1600000,
  '2850 NW 7th St, Miami FL 33125', 'Miami-Dade', 'commercial', 'rented',
  'documents', 85.0, 'under_review', '2025-10-01'),
 
-('la000001-0000-0000-0000-000000000002',
- 'c1000001-0000-0000-0000-000000000003',
+('1a000001-0000-0000-0000-000000000002',
+ 'a0000001-0000-0000-0000-000000000003',
  'refinance', 900000, NULL,
  '301 Brickell Ave #12, Miami FL', 'Miami-Dade', 'commercial', 'owner_occupied',
  'submitted', 90.0, 'submitted', '2025-10-15'),
 
-('la000001-0000-0000-0000-000000000003',
- 'c1000001-0000-0000-0000-000000000004',
+('1a000001-0000-0000-0000-000000000003',
+ 'a0000001-0000-0000-0000-000000000004',
  'purchase', 2100000, 2700000,
  '10 Buckhead Loop, Atlanta GA 30305', 'Fulton', 'commercial', 'rented',
  'documents', 75.0, 'under_review', '2025-11-02'),
 
-('la000001-0000-0000-0000-000000000004',
- 'c1000001-0000-0000-0000-000000000005',
+('1a000001-0000-0000-0000-000000000004',
+ 'a0000001-0000-0000-0000-000000000005',
  'purchase', 480000, 600000,
  '400 Ponce de Leon Ave, Atlanta GA', 'DeKalb', 'residential', 'owner_occupied',
  'documents', 60.0, 'draft', '2025-11-20'),
 
-('la000001-0000-0000-0000-000000000005',
- 'c1000001-0000-0000-0000-000000000007',
+('1a000001-0000-0000-0000-000000000005',
+ 'a0000001-0000-0000-0000-000000000007',
  'purchase', 3400000, 4200000,
  '1800 S Congress Ave, Austin TX', 'Travis', 'commercial', 'rented',
  'submitted', 95.0, 'approved', '2025-09-10'),
 
-('la000001-0000-0000-0000-000000000006',
- 'c1000001-0000-0000-0000-000000000009',
+('1a000001-0000-0000-0000-000000000006',
+ 'a0000001-0000-0000-0000-000000000009',
  'cashout', 650000, NULL,
  '67 Riverside Dr, Houston TX', 'Harris', 'commercial', 'owner_occupied',
  'documents', 50.0, 'rejected', '2025-08-22'),
 
-('la000001-0000-0000-0000-000000000007',
- 'c1000001-0000-0000-0000-000000000010',
+('1a000001-0000-0000-0000-000000000007',
+ 'a0000001-0000-0000-0000-000000000010',
  'purchase', 720000, 900000,
  '1000 Brickell Bay Dr, Miami FL', 'Miami-Dade', 'commercial', 'rented',
  'documents', 70.0, 'under_review', '2025-11-05'),
 
-('la000001-0000-0000-0000-000000000008',
- 'c1000001-0000-0000-0000-000000000013',
+('1a000001-0000-0000-0000-000000000008',
+ 'a0000001-0000-0000-0000-000000000013',
  'purchase', 5800000, 7200000,
  '3900 N Miami Ave, Miami FL', 'Miami-Dade', 'commercial', 'rented',
  'submitted', 92.0, 'submitted', '2025-12-01'),
 
-('la000001-0000-0000-0000-000000000009',
- 'c1000001-0000-0000-0000-000000000014',
+('1a000001-0000-0000-0000-000000000009',
+ 'a0000001-0000-0000-0000-000000000014',
  'refinance', 310000, NULL,
  '90 Edgewood Ave, Atlanta GA', 'Fulton', 'commercial', 'owner_occupied',
  'documents', 65.0, 'under_review', '2025-11-18'),
 
-('la000001-0000-0000-0000-000000000010',
- 'c1000001-0000-0000-0000-000000000002',
+('1a000001-0000-0000-0000-000000000010',
+ 'a0000001-0000-0000-0000-000000000002',
  'purchase', 560000, 700000,
  '1200 SW 22nd Ave, Miami FL', 'Miami-Dade', 'residential', 'owner_occupied',
  'transaction_type', 15.0, 'draft', '2025-12-10');
@@ -599,23 +599,23 @@ VALUES
 -- ─────────────────────────────────────────────────────────
 
 INSERT INTO loan_participants (application_id, display_name, role, is_entity, is_spouse, spouse_of) VALUES
-('la000001-0000-0000-0000-000000000001', 'Robert M. Harrington',     'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000001', 'Harrington Holdings LLC',  'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000002', 'Carlos A. Reyes',          'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000002', 'Reyes Commercial Group',   'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000003', 'Jennifer K. Whitmore',     'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000003', 'Whitmore Properties LLC',  'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000003', 'Mark D. Whitmore',         'guarantor', FALSE, TRUE,  'Jennifer K. Whitmore'),
-('la000001-0000-0000-0000-000000000004', 'David T. Nguyen',          'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000005', 'Michael J. Torres',        'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000005', 'Torres & Sons Realty',     'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000006', 'Brian W. Fontaine',        'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000006', 'Fontaine Capital LLC',     'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000007', 'Maria E. Santos',          'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000008', 'Thomas P. Kaplan',         'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000008', 'Kaplan Development Corp',  'guarantor', TRUE,  FALSE, NULL),
-('la000001-0000-0000-0000-000000000009', 'Rosa N. Delgado',          'borrower',  FALSE, FALSE, NULL),
-('la000001-0000-0000-0000-000000000010', 'Sandra L. Vega',           'borrower',  FALSE, FALSE, NULL);
+('1a000001-0000-0000-0000-000000000001', 'Robert M. Harrington',     'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000001', 'Harrington Holdings LLC',  'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000002', 'Carlos A. Reyes',          'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000002', 'Reyes Commercial Group',   'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000003', 'Jennifer K. Whitmore',     'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000003', 'Whitmore Properties LLC',  'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000003', 'Mark D. Whitmore',         'guarantor', FALSE, TRUE,  'Jennifer K. Whitmore'),
+('1a000001-0000-0000-0000-000000000004', 'David T. Nguyen',          'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000005', 'Michael J. Torres',        'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000005', 'Torres & Sons Realty',     'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000006', 'Brian W. Fontaine',        'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000006', 'Fontaine Capital LLC',     'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000007', 'Maria E. Santos',          'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000008', 'Thomas P. Kaplan',         'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000008', 'Kaplan Development Corp',  'guarantor', TRUE,  FALSE, NULL),
+('1a000001-0000-0000-0000-000000000009', 'Rosa N. Delgado',          'borrower',  FALSE, FALSE, NULL),
+('1a000001-0000-0000-0000-000000000010', 'Sandra L. Vega',           'borrower',  FALSE, FALSE, NULL);
 
 -- ─────────────────────────────────────────────────────────
 -- PFS STATEMENTS  (4 clientes con PFS completo)
@@ -628,28 +628,28 @@ INSERT INTO pfs_statement
      information_date, status, is_locked)
 VALUES
 ('pfs-harrington-2023',
- 'c1000001-0000-0000-0000-000000000001',
+ 'a0000001-0000-0000-0000-000000000001',
  '591-62-5001', 'Robert M. Harrington',
  '305-555-0101', '305-555-9901',
  'Harrington Holdings LLC', '142 Oak Lane', 'Miami', 'FL', '33130',
  'Real Estate', '2023-12-31', 'approved', TRUE),
 
 ('pfs-reyes-2023',
- 'c1000001-0000-0000-0000-000000000003',
+ 'a0000001-0000-0000-0000-000000000003',
  '591-62-5003', 'Carlos A. Reyes',
  '786-555-0103', '786-555-9903',
  'Reyes Commercial Group', '301 Brickell Ave #12', 'Miami', 'FL', '33131',
  'Commercial Real Estate', '2023-12-31', 'submitted', FALSE),
 
 ('pfs-whitmore-2023',
- 'c1000001-0000-0000-0000-000000000004',
+ 'a0000001-0000-0000-0000-000000000004',
  '591-62-5004', 'Jennifer K. Whitmore',
  '404-555-0104', '404-555-9904',
  'Whitmore Properties LLC', '55 Peachtree Rd', 'Atlanta', 'GA', '30309',
  'Real Estate', '2023-12-31', 'approved', TRUE),
 
 ('pfs-fontaine-2023',
- 'c1000001-0000-0000-0000-000000000009',
+ 'a0000001-0000-0000-0000-000000000009',
  '591-62-5009', 'Brian W. Fontaine',
  '713-555-0109', NULL,
  'Fontaine Capital LLC', '67 Riverside Dr', 'Houston', 'TX', '77002',
@@ -714,13 +714,13 @@ INSERT INTO rentroll_extractions
     (user_uuid, suite, tenant_name, landlord_name, sf,
      start_date, end_date, base_rent, security_deposit, lease_type, escalation)
 VALUES
-('c1000001-0000-0000-0000-000000000001', '101', 'Bright Dental Studio',     'Harrington Holdings LLC',     1800, '2022-01-01', '2025-12-31',  4500,  9000, 'NNN',          '3% annual'),
-('c1000001-0000-0000-0000-000000000001', '102', 'Atlas Insurance Agency',   'Harrington Holdings LLC',     1200, '2023-03-01', '2026-02-28',  3200,  6400, 'NNN',          '2.5% annual'),
-('c1000001-0000-0000-0000-000000000001', '103', 'Verde Coffee Bar',          'Harrington Holdings LLC',      900, '2021-06-01', '2024-05-31',  2400,  4800, 'Gross',        'CPI'),
-('c1000001-0000-0000-0000-000000000004', '201', 'Whitmore Law Partners',    'Whitmore Properties LLC',     3200, '2020-01-01', '2027-12-31', 11200, 22400, 'NNN',          '3% annual'),
-('c1000001-0000-0000-0000-000000000004', '202', 'Peach State Logistics',    'Whitmore Properties LLC',     2400, '2022-07-01', '2025-06-30',  7200, 14400, 'NNN',          'Fixed'),
-('c1000001-0000-0000-0000-000000000007', '1A',  'Lone Star Fitness',        'Torres & Sons Realty',        4100, '2021-01-01', '2025-12-31', 10250, 20500, 'NNN',          '3% annual'),
-('c1000001-0000-0000-0000-000000000007', '1B',  'Austin Craft Brewing',     'Torres & Sons Realty',        2800, '2023-01-01', '2027-12-31',  8400, 16800, 'Modified Gross','CPI'),
-('c1000001-0000-0000-0000-000000000009', '501', 'Gulf Industrial Supply',   'Fontaine Capital LLC',        6200, '2019-06-01', '2024-05-31', 12400, 24800, 'NNN',          '2% annual'),
-('c1000001-0000-0000-0000-000000000013', '301', 'Kaplan Offices Tenant A',  'Kaplan Development Corp',     5000, '2022-01-01', '2026-12-31', 18500, 37000, 'NNN',          '3% annual'),
-('c1000001-0000-0000-0000-000000000013', '302', 'Kaplan Offices Tenant B',  'Kaplan Development Corp',     3500, '2023-06-01', '2026-05-31', 13500, 27000, 'NNN',          '3% annual');
+('a0000001-0000-0000-0000-000000000001', '101', 'Bright Dental Studio',     'Harrington Holdings LLC',     1800, '2022-01-01', '2025-12-31',  4500,  9000, 'NNN',          '3% annual'),
+('a0000001-0000-0000-0000-000000000001', '102', 'Atlas Insurance Agency',   'Harrington Holdings LLC',     1200, '2023-03-01', '2026-02-28',  3200,  6400, 'NNN',          '2.5% annual'),
+('a0000001-0000-0000-0000-000000000001', '103', 'Verde Coffee Bar',          'Harrington Holdings LLC',      900, '2021-06-01', '2024-05-31',  2400,  4800, 'Gross',        'CPI'),
+('a0000001-0000-0000-0000-000000000004', '201', 'Whitmore Law Partners',    'Whitmore Properties LLC',     3200, '2020-01-01', '2027-12-31', 11200, 22400, 'NNN',          '3% annual'),
+('a0000001-0000-0000-0000-000000000004', '202', 'Peach State Logistics',    'Whitmore Properties LLC',     2400, '2022-07-01', '2025-06-30',  7200, 14400, 'NNN',          'Fixed'),
+('a0000001-0000-0000-0000-000000000007', '1A',  'Lone Star Fitness',        'Torres & Sons Realty',        4100, '2021-01-01', '2025-12-31', 10250, 20500, 'NNN',          '3% annual'),
+('a0000001-0000-0000-0000-000000000007', '1B',  'Austin Craft Brewing',     'Torres & Sons Realty',        2800, '2023-01-01', '2027-12-31',  8400, 16800, 'Modified Gross','CPI'),
+('a0000001-0000-0000-0000-000000000009', '501', 'Gulf Industrial Supply',   'Fontaine Capital LLC',        6200, '2019-06-01', '2024-05-31', 12400, 24800, 'NNN',          '2% annual'),
+('a0000001-0000-0000-0000-000000000013', '301', 'Kaplan Offices Tenant A',  'Kaplan Development Corp',     5000, '2022-01-01', '2026-12-31', 18500, 37000, 'NNN',          '3% annual'),
+('a0000001-0000-0000-0000-000000000013', '302', 'Kaplan Offices Tenant B',  'Kaplan Development Corp',     3500, '2023-06-01', '2026-05-31', 13500, 27000, 'NNN',          '3% annual');
