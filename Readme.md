@@ -101,7 +101,7 @@ que en una BD relacional es invisible para el banco:
 SELECT
     fg.data -> 'forms' -> 'schedule_e' -> 'entities' AS empresas_vinculadas
 FROM filings_guarantor fg
-WHERE fg.client_uuid = 'c1000001-0000-0000-0000-000000000009';
+WHERE fg.client_uuid = 'a0000001-0000-0000-0000-000000000009';
 ```
 
 El resultado muestra que Fontaine es socio de **dos S-Corps**:
